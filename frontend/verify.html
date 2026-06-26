@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Certificate - CertiLock</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-shield-halved"></i> <span>CertiLock</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="verify.html" class="active">Verify</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html" class="btn-login">Admin Login</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="glass-card text-center">
+            <h2>Verifikasi Sertifikat</h2>
+            <p>Unggah file sertifikat PNG yang telah diamankan untuk memverifikasi keasliannya dan melihat data tersembunyi.</p>
+            
+            <div id="alertBox" class="alert"></div>
+
+            <form id="verifyForm">
+                <div class="form-group file-upload" id="dropZone">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <p>Klik atau Drag & Drop file sertifikat (.png)</p>
+                    <input type="file" id="stegoImage" name="stegoImage" accept="image/png" required>
+                    <span id="fileName" style="color: var(--primary-color); margin-top: 10px;"></span>
+                </div>
+                
+                <button type="submit" class="btn" id="verifyBtn">
+                    <span class="loader" id="verifyLoader"></span>
+                    Mulai Verifikasi
+                </button>
+            </form>
+
+            <div class="result-box" id="resultBox">
+                <h3><i class="fa-solid fa-circle-check"></i> Sertifikat Valid</h3>
+                <hr style="border: 1px solid var(--glass-border); margin: 10px 0;">
+                <div class="result-item">
+                    <strong>No. Sertifikat</strong> <span id="resNo"></span>
+                </div>
+                <div class="result-item">
+                    <strong>Nama Pemilik</strong> <span id="resName"></span>
+                </div>
+                <div class="result-item">
+                    <strong>Nama Acara</strong> <span id="resEvent"></span>
+                </div>
+                <div class="result-item">
+                    <strong>Tanggal Terbit</strong> <span id="resDate"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CertiLock Project - Sistem Multimedia</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

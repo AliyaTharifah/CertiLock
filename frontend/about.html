@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - CertiLock</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <i class="fa-solid fa-shield-halved"></i> <span>CertiLock</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="verify.html">Verify</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="glass-card large">
+            <h2 class="text-center">Tentang Proyek CertiLock</h2>
+            <hr style="border: 1px solid var(--glass-border); margin-bottom: 1.5rem;">
+
+            <h3><i class="fa-solid fa-microchip" style="color: var(--primary-color);"></i> Bagaimana Ini Bekerja?</h3>
+            <p>CertiLock dirancang untuk memastikan keaslian sertifikat digital. Proses ini melibatkan dua algoritma
+                utama:</p>
+
+            <ul style="color: var(--text-muted); margin-left: 1.5rem; margin-bottom: 1.5rem; line-height: 1.6;">
+                <li><strong>Run Length Encoding (RLE):</strong> Sebelum data diverifikasi (seperti nama dan nomor
+                    sertifikat) disembunyikan, teks tersebut dikompresi menggunakan RLE. Hal ini dilakukan untuk
+                    mengoptimalkan penggunaan kapasitas piksel gambar.</li>
+                <li><strong>Least Significant Bit (LSB) Steganography:</strong> Data yang telah dikompresi kemudian
+                    diubah ke dalam bentuk biner (0 dan 1). Biner ini lalu disisipkan ke dalam bit-bit warna (RGB) yang
+                    paling tidak signifikan di setiap piksel gambar sertifikat. Karena hanya bit terkecil yang diubah,
+                    warna gambar tidak akan terlihat berubah oleh mata manusia.</li>
+            </ul>
+
+            <h3><i class="fa-solid fa-bullseye" style="color: var(--primary-color);"></i> Tujuan</h3>
+            <p>CertiLock adalah platform untuk mengamankan dan memverifikasi sertifikat digital melalui teknologi
+                kompresi dan steganografi, sehingga membantu menjaga keaslian serta mencegah pemalsuan dokumen.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CertiLock Project </p>
+    </footer>
+</body>
+
+</html>
